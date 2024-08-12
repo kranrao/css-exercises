@@ -1,6 +1,14 @@
 .header  {
   font-family: monospace;
   background: papayawhip;
+  /* this sets header as a flex container with its children as flex items */
+  display: flex;
+  /* centers flex items vertically in the container */
+  align-items: center;
+  /* centers log, justifies lists to left and right ends of flex container */
+  justify-content: space-between;
+  /* adds padding between flex container and children */
+  padding: 10px;
 }
 
 .logo {
@@ -14,6 +22,13 @@
 ul {
   /* this removes the dots on the list items*/
   list-style-type: none;
+  /* this sets ul as a flex container with its children as flex items */
+  display: flex;
+  /* sets a gap between flex items */
+  gap: 16px;
+  /* removes default margin and padding */
+  margin: 0px;
+  padding: 0px;
 }
 
 a {
