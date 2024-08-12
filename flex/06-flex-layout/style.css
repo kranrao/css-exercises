@@ -24,3 +24,54 @@ input {
   padding: 8px 24px;
   width: 400px;
 }
+
+/* solution */
+
+/* sticks header and footer to top and bottom of body */
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* centers content */
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+/* removes default list style */
+ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+/* removes default anchor style */
+a {
+  text-decoration: none;
+  color: grey;
+}
+
+/* sets left and right links to corners of body */
+.header, .footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+.left-links, .right-links {
+  display: flex;
+  gap: 16px;
+}
+
+.footer {
+  background-color: #eeeeee;
+}
+
+button {
+  padding: 8px;
+}
