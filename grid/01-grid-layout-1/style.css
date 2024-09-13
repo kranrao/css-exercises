@@ -1,3 +1,10 @@
+:root {
+  --small-row-width: 100px;
+  --large-row-width: calc(5 * var(--small-row-width));
+  --small-col-width: 300px;
+  --large-col-width: calc(3 * var(--small-col-width));
+}
+
 body,
 html {
   height: 100%;
@@ -9,6 +16,11 @@ html {
   height: 100%;
   padding: 16px;
   box-sizing: border-box;
+
+  /* Grid */
+  display: grid;
+  gap: 15px;
+  grid-template: repeat(2, var(--small-row-width)) var(--large-row-width) var(--small-row-width) / var(--small-col-width) var(--large-col-width);
 }
 
 .container div {
@@ -22,10 +34,16 @@ html {
 
 .header {
   background-color: #006157;
+
+  /* Grid */
+  grid-area: 1 / 1 / 2 / 3;
 }
 
 .sidebar {
   background-color: #005B94;
+
+  /* Grid */
+  grid-area: 2 / 1 / 4 / 2;
 }
 
 .nav {
@@ -38,6 +56,9 @@ html {
 
 .footer {
   background-color: #393f4d;
+
+  /* Grid */
+  grid-area: 4 / 1 / 5 / 3;
 }
 
 .article p {
